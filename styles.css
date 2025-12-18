@@ -15,7 +15,7 @@ body {
     color: var(--dark-text);
 }
 
-/* --- ESTILO DE MENÚ ORIGINAL (ANCHO Y FIJO) --- */
+/* --- MENÚ ORIGINAL (ANCHO Y FIJO) --- */
 header {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -56,8 +56,6 @@ nav a {
 nav a:hover {
     color: var(--accent-color);
 }
-/* FIN DE ESTILOS DE MENÚ ORIGINAL */
-
 
 /* SECCIÓN "HÉROE" */
 .hero {
@@ -168,19 +166,14 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #e6e6F;
+    background-color: #e6e6e6;
 }
 
-td:last-child {
+/* Estilo para resaltar los precios */
+td:nth-child(2), td:nth-child(3) {
     font-weight: bold;
     color: var(--primary-color);
 }
-
-td.no-discount {
-    color: var(--dark-text);
-    font-weight: normal;
-}
-
 
 /* SECCIÓN DE CONTACTO */
 .info-contacto ul {
@@ -231,13 +224,8 @@ footer {
     color: var(--white-color);
 }
 
-
-/* ============================================= */
-/* --- ESTILOS PARA DISPOSITIVOS MÓVILES --- */
-/* ============================================= */
+/* --- ADAPTACIÓN A MÓVILES --- */
 @media (max-width: 768px) {
-
-    /* Encabezado */
     header {
         flex-direction: column;
         padding: 20px;
@@ -249,54 +237,27 @@ footer {
         margin: 0 10px;
     }
 
-    /* Hero */
-    .hero {
-        height: 50vh;
-    }
-    .hero-text h1 {
-        font-size: 1.8em;
-        padding: 0 10px;
-    }
-    .hero-text p {
-        font-size: 1em;
-    }
+    .hero { height: 50vh; }
+    .hero-text h1 { font-size: 1.8em; }
+    
+    .gallery-container { flex-direction: column; }
 
-    /* Galería en Móvil */
-    .gallery-container {
-        flex-direction: column;
-    }
-    .gallery-card {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Tabla de Precios en Móvil (Estilo Tarjeta) */
-    thead {
-        display: none;
-    }
-
+    /* Estilo de tabla en móvil */
+    thead { display: none; }
     tr {
         display: block;
         background-color: #f9f9f9;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        border-radius: 8px;
         margin-bottom: 20px;
         padding: 15px;
-        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
     td {
         display: block;
         text-align: left;
-        position: relative;
-        border-bottom: none;
         padding: 8px 0;
+        border: none;
     }
-
-    td:last-child {
-        border-bottom: none;
-    }
-
     td::before {
         content: attr(data-label);
         display: block;
@@ -305,27 +266,5 @@ footer {
         font-size: 0.8em;
         text-transform: uppercase;
         margin-bottom: 4px;
-        position: static;
-        width: auto;
     }
-
-    td[data-label="Base"] {
-        color: #777;
-    }
-    td[data-label="Especial"] {
-        font-weight: bold;
-        font-size: 1.3em;
-        color: var(--primary-color);
-    }
-    
-    td[data-label="Especial"].no-discount {
-        color: var(--dark-text);
-        font-weight: normal;
-        font-size: 1em;
-    }
-
-    /* Asignamos los textos de las cabeceras */
-    tr td:nth-of-type(1)::before { content: "Servicio / Destino"; }
-    tr td:nth-of-type(2)::before { content: "Precio Base"; }
-    tr td:nth-of-type(3)::before { content: "Precio Especial (Efectivo/Transf.)"; }
 }
