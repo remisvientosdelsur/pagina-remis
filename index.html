@@ -6,19 +6,19 @@
     <title>Taxi Vientos Del Sur - El Chaltén</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-       <div class="logo">
-    <a href="#">Taxi Vientos Del Sur</a>
-</div>
+        <div class="logo">
+            Taxi Vientos Del Sur
+        </div>
         <nav>
             <ul>
-                <li><a href="#galeria">Vehículo</a></li>
+                <li><a href="#vehiculo">Vehículo</a></li>
                 <li><a href="#precios">Tarifas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -26,104 +26,139 @@
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>Tu transporte de confianza en El Chaltén y la Patagonia</h1>
-            <p>Viajes seguros, puntuales y confortables.</p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Tu viaje seguro en El Chaltén</h1>
+            <p>Servicio de taxi profesional, puntual y confortable para todos tus destinos en la Patagonia.</p>
+            <a href="https://wa.me/5492966633964" target="_blank" class="btn-hero">
+                <i class="fab fa-whatsapp"></i> Reservar Ahora
+            </a>
         </div>
     </section>
 
     <main>
+        <section class="features-section">
+            <div class="feature-item">
+                <div class="icon-box">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Máxima Seguridad</h3>
+                <p>Vehículo moderno con todas las prestaciones de seguridad y conductor profesional.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon-box">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Confort Premium</h3>
+                <p>Fiat Cronos espacioso, climatizado y con amplio baúl para tu equipaje.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon-box">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Disponibilidad 24hs</h3>
+                <p>Estamos disponibles en cualquier momento para tus traslados urgentes o programados.</p>
+            </div>
+        </section>
 
-        <section id="galeria">
-            <h2>Nuestro Vehículo: Fiat Cronos Precision</h2>
+        <section id="vehiculo" class="content-section">
+            <h2 class="section-title">Nuestro Vehículo</h2>
             <p class="section-intro">
-                Elegancia, comodidad y seguridad en cada viaje. Nuestro Fiat Cronos Precision color negro ofrece el equilibrio ideal entre confort ejecutivo y rendimiento confiable, pensado para que cada traslado sea una experiencia placentera.
+                Viajá con estilo y comodidad en nuestro Fiat Cronos Precision. Un auto pensado para que disfrutes el trayecto tanto como el destino.
             </p>
             <div class="gallery-container">
                 <div class="gallery-card">
-                    <img src="remis-frente.jpeg" alt="Frente del Fiat Cronos">
-                    <h3>Elegancia y Confort Interior</h3>
-                    <p>Disfrute de un viaje superior con asientos ergonómicos, climatizador automático y una cabina con aislamiento acústico.</p>
+                    <div class="img-container">
+                        <img src="remis-frente.jpeg" alt="Frente del Fiat Cronos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Diseño y Elegancia</h3>
+                        <p>Un vehículo moderno que destaca por su presencia y confort interior.</p>
+                    </div>
                 </div>
                 <div class="gallery-card">
-                    <img src="remis-lado.jpeg" alt="Lado del Fiat Cronos">
-                    <h3>Máxima Seguridad en Ruta</h3>
-                    <p>Viaje con total tranquilidad. Equipado con frenos ABS, control de estabilidad (ESC) y airbags frontales/laterales.</p>
+                    <div class="img-container">
+                        <img src="remis-lado.jpeg" alt="Perfil del Fiat Cronos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Viaje Seguro</h3>
+                        <p>Equipado con tecnología de punta en seguridad activa y pasiva.</p>
+                    </div>
                 </div>
                 <div class="gallery-card">
-                    <img src="remis-baul.jpeg" alt="Baúl abierto del Fiat Cronos">
-                    <h3>El Baúl Más Amplio (523 L)</h3>
-                    <p>No se preocupe por su equipaje. Con 523 litros, tenemos uno de los baúles más grandes, ideal para valijas y mochilas.</p>
+                    <div class="img-container">
+                        <img src="remis-baul.jpeg" alt="Baúl espacioso">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gran Capacidad</h3>
+                        <p>Baúl de 523 litros, ideal para todo el equipaje de tu grupo.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-      <section id="precios">
-            <h2>Tarifas y Servicios</h2>
-            <p class="section-intro">Precios por vehículo (hasta 4 pasajeros). Se aceptan Pesos Argentinos (ARS) y Dólares (USD).</p>
+        <section id="precios" class="content-section bg-light">
+            <h2 class="section-title">Tarifario Vigente</h2>
+            <p class="section-intro">Tarifas claras y transparentes. Aceptamos Pesos Argentinos (ARS) y Dólares (USD).</p>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>Servicio / Destino</th>
-                        <th>Precio (ARS)</th>
-                        <th>Precio (USD)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td data-label="Servicio">Viajes Urbanos</td><td data-label="Pesos">$7.000</td><td data-label="Dólares">u$s 5</td></tr>
-                    <tr><td data-label="Servicio">Los Huemules (Estancia)</td><td data-label="Pesos">$60.000</td><td data-label="Dólares">u$s 40</td></tr>
-                    <tr><td data-label="Servicio">Chorrillo del Salto c/ 30 min de espera</td><td data-label="Pesos">$40.000</td><td data-label="Dólares">u$s 27</td></tr>
-                    <tr><td data-label="Servicio">Chorrillo del Salto (Solo ida)</td><td data-label="Pesos">$25.000</td><td data-label="Dólares">u$s 17</td></tr>
-                    <tr><td data-label="Servicio">Estancia Bonanza</td><td data-label="Pesos">$40.000</td><td data-label="Dólares">u$s 27</td></tr>
-                    <tr><td data-label="Servicio">El Pilar / EcoDomos / Río Eléctrico</td><td data-label="Pesos">$55.000</td><td data-label="Dólares">u$s 37</td></tr>
-                    <tr><td data-label="Servicio">Lago del Desierto (Solo ida)</td><td data-label="Pesos">$120.000</td><td data-label="Dólares">u$s 80</td></tr>
-                    <tr><td data-label="Servicio">Lago del Desierto c/ 3h de espera</td><td data-label="Pesos">$190.000</td><td data-label="Dólares">u$s 127</td></tr>
-                    <tr><td data-label="Servicio">Estancia La Quinta</td><td data-label="Pesos">$25.000</td><td data-label="Dólares">u$s 17</td></tr>
-                    <tr><td data-label="Servicio">Bahía Túnel</td><td data-label="Pesos">$60.000</td><td data-label="Dólares">u$s 40</td></tr>
-                    <tr><td data-label="Servicio">Parador La Leona</td><td data-label="Pesos">$150.000</td><td data-label="Dólares">u$s 100</td></tr>
-                    <tr><td data-label="Servicio">Aeropuerto de Calafate</td><td data-label="Pesos">$230.000</td><td data-label="Dólares">u$s 154</td></tr>
-                    <tr><td data-label="Servicio">Ciudad de El Calafate</td><td data-label="Pesos">$250.000</td><td data-label="Dólares">u$s 167</td></tr>
-                    <tr><td data-label="Servicio">Glaciar Perito Moreno c/ 3h de espera</td><td data-label="Pesos">$450.000</td><td data-label="Dólares">u$s 300</td></tr>
-                    <tr><td data-label="Servicio">Hora de espera</td><td data-label="Pesos">$50.000</td><td data-label="Dólares">u$s 34</td></tr>
-
-                    <tr><td data-label="Servicio">Chalten Camp</td><td data-label="Pesos">$30.000</td><td data-label="Dólares">u$s 20</td></tr>
-                    <tr><td data-label="Servicio">Explora</td><td data-label="Pesos">$60.000</td><td data-label="Dólares">u$s 40</td></tr>
-                    <tr><td data-label="Servicio">Refugio Laguna Cóndor</td><td data-label="Pesos">$70.000</td><td data-label="Dólares">u$s 47</td></tr>
-                    <tr><td data-label="Servicio">Refugio de Glaciares</td><td data-label="Pesos">$85.000</td><td data-label="Dólares">u$s 57</td></tr>
-                    <tr><td data-label="Servicio">3 Lagos</td><td data-label="Pesos">$125.000</td><td data-label="Dólares">u$s 84</td></tr>
-                </tbody>
-            </table>
-            <p class="aclaracion">*Precios actualizados a Diciembre de 2025. Los valores en USD han sido redondeados hacia arriba. Consulte por otros destinos.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servicio / Destino</th>
+                            <th>Precio (ARS)</th>
+                            <th>Precio (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="Servicio">Viajes Urbanos</td><td data-label="Pesos" class="price-ars">$7.000</td><td data-label="Dólares" class="price-usd">u$s 5</td></tr>
+                        <tr><td data-label="Servicio">Los Huemules (Estancia)</td><td data-label="Pesos" class="price-ars">$60.000</td><td data-label="Dólares" class="price-usd">u$s 40</td></tr>
+                        <tr><td data-label="Servicio">Chorrillo del Salto c/ 30 min espera</td><td data-label="Pesos" class="price-ars">$40.000</td><td data-label="Dólares" class="price-usd">u$s 27</td></tr>
+                        <tr><td data-label="Servicio">Chorrillo del Salto (Solo ida)</td><td data-label="Pesos" class="price-ars">$25.000</td><td data-label="Dólares" class="price-usd">u$s 17</td></tr>
+                        <tr><td data-label="Servicio">Estancia Bonanza</td><td data-label="Pesos" class="price-ars">$40.000</td><td data-label="Dólares" class="price-usd">u$s 27</td></tr>
+                        <tr><td data-label="Servicio">El Pilar / EcoDomos / Río Eléctrico</td><td data-label="Pesos" class="price-ars">$55.000</td><td data-label="Dólares" class="price-usd">u$s 37</td></tr>
+                        <tr><td data-label="Servicio">Lago del Desierto (Solo ida)</td><td data-label="Pesos" class="price-ars">$120.000</td><td data-label="Dólares" class="price-usd">u$s 80</td></tr>
+                        <tr><td data-label="Servicio">Lago del Desierto c/ 3h espera</td><td data-label="Pesos" class="price-ars">$190.000</td><td data-label="Dólares" class="price-usd">u$s 127</td></tr>
+                        <tr><td data-label="Servicio">Estancia La Quinta</td><td data-label="Pesos" class="price-ars">$25.000</td><td data-label="Dólares" class="price-usd">u$s 17</td></tr>
+                        <tr><td data-label="Servicio">Bahía Túnel</td><td data-label="Pesos" class="price-ars">$60.000</td><td data-label="Dólares" class="price-usd">u$s 40</td></tr>
+                        <tr><td data-label="Servicio">Parador La Leona</td><td data-label="Pesos" class="price-ars">$150.000</td><td data-label="Dólares" class="price-usd">u$s 100</td></tr>
+                        <tr><td data-label="Servicio">Aeropuerto de Calafate</td><td data-label="Pesos" class="price-ars">$230.000</td><td data-label="Dólares" class="price-usd">u$s 154</td></tr>
+                        <tr><td data-label="Servicio">Ciudad de El Calafate</td><td data-label="Pesos" class="price-ars">$250.000</td><td data-label="Dólares" class="price-usd">u$s 167</td></tr>
+                        <tr><td data-label="Servicio">Glaciar Perito Moreno c/ 3h espera</td><td data-label="Pesos" class="price-ars">$450.000</td><td data-label="Dólares" class="price-usd">u$s 300</td></tr>
+                        <tr><td data-label="Servicio">Hora de espera</td><td data-label="Pesos" class="price-ars">$50.000</td><td data-label="Dólares" class="price-usd">u$s 34</td></tr>
+                        <tr><td data-label="Servicio">Chalten Camp</td><td data-label="Pesos" class="price-ars">$30.000</td><td data-label="Dólares" class="price-usd">u$s 20</td></tr>
+                        <tr><td data-label="Servicio">Explora</td><td data-label="Pesos" class="price-ars">$60.000</td><td data-label="Dólares" class="price-usd">u$s 40</td></tr>
+                        <tr><td data-label="Servicio">Refugio Laguna Cóndor</td><td data-label="Pesos" class="price-ars">$70.000</td><td data-label="Dólares" class="price-usd">u$s 47</td></tr>
+                        <tr><td data-label="Servicio">Refugio de Glaciares</td><td data-label="Pesos" class="price-ars">$85.000</td><td data-label="Dólares" class="price-usd">u$s 57</td></tr>
+                        <tr><td data-label="Servicio">3 Lagos</td><td data-label="Pesos" class="price-ars">$125.000</td><td data-label="Dólares" class="price-usd">u$s 84</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="aclaracion">*Precios actualizados a Diciembre de 2025. Consulte por otros destinos.</p>
         </section>
-        <section id="contacto">
-            <h2>Contacto y Reservas</h2>
-            <p class="section-intro">Coordina tu próximo viaje. ¡Estamos disponibles para ayudarte!</p>
-            <div class="info-contacto">
-                <ul>
-                    <li>
-                        <i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 
-                        <a href="tel:+542966633964">+54 2966-633964</a>
-                    </li>
-                    <li>
-                        <i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 
-                        <a href="https://wa.me/5492966633964" target="_blank">Enviar Mensaje Directo</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i> <strong>Email:</strong> 
-                        <a href="mailto:remisvientosdelsur@gmail.com">remisvientosdelsur@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-clock"></i> <strong>Horario de atención:</strong> 24 horas.
-                    </li>
-                </ul>
+
+        <section id="contacto" class="footer-section">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h2>Taxi Vientos Del Sur</h2>
+                    <p>Tu servicio de transporte de confianza en El Chaltén. Viajes seguros las 24 horas.</p>
+                </div>
+                <div class="footer-contact-links">
+                    <a href="https://wa.me/5492966633964" target="_blank" class="contact-box">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Directo</span>
+                    </a>
+                    <a href="tel:+542966633964" class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Llamar Ahora</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Taxi Vientos Del Sur. Todos los derechos reservados.</p>
             </div>
         </section>
     </main>
-
-   <footer>
-    <p>&copy; 2026 Taxi Vientos Del Sur. Todos los derechos reservados.</p>
-</footer>
 
 </body>
 </html>
