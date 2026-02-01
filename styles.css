@@ -1,21 +1,21 @@
-/* --- VARIABLES DE COLOR (Tu paleta azul) --- */
+/* --- VARIABLES DE COLOR (Tu paleta azul profesional) --- */
 :root {
-    --primary-dark: #1A345B;   /* Azul oscuro para fondos fuertes y textos principales */
-    --primary-medium: #2c4a7c; /* Azul medio para hovers y detalles */
-    --accent-blue: #6A9EE0;    /* Azul claro vibrante para botones y acentos */
-    --bg-light: #F4F7FA;       /* Fondo muy claro para secciones alternas */
+    --primary-dark: #1A345B;   /* Azul oscuro institucional */
+    --primary-medium: #2c4a7c; /* Azul medio para detalles */
+    --accent-blue: #6A9EE0;    /* Azul vibrante para botones y Wi-Fi */
+    --bg-light: #F4F7FA;       /* Fondo grisáceo muy claro */
     --white: #FFFFFF;
-    --text-dark: #333333;      /* Color de texto principal */
-    --text-light: #666666;     /* Color de texto secundario */
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
-    --shadow-md: 0 5px 15px rgba(0,0,0,0.12); /* Sombra media para tarjetas */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-md: 0 5px 15px rgba(0,0,0,0.12);
 }
 
 /* --- RESETEO Y ESTILOS GENERALES --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Importante para el diseño moderno */
+    box-sizing: border-box;
 }
 
 html {
@@ -36,7 +36,7 @@ h1, h2, h3 {
 
 /* --- CLASES DE UTILIDAD PARA SECCIONES --- */
 .content-section {
-    padding: 80px 20px; /* Más espacio vertical */
+    padding: 80px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -53,7 +53,6 @@ h1, h2, h3 {
     position: relative;
 }
 
-/* Pequeña línea azul debajo de los títulos */
 .section-title::after {
     content: '';
     display: block;
@@ -72,7 +71,7 @@ h1, h2, h3 {
     font-size: 1.1em;
 }
 
-/* --- MENÚ DE NAVEGACIÓN (Moderno y Pegajoso) --- */
+/* --- MENÚ DE NAVEGACIÓN --- */
 header {
     background-color: var(--primary-dark);
     padding: 15px 5%;
@@ -111,22 +110,20 @@ nav a:hover {
     color: var(--accent-blue);
 }
 
-/* --- SECCIÓN HÉROE (Portada Impactante) --- */
+/* --- SECCIÓN HÉROE --- */
 .hero {
-    height: 85vh; /* Más alto para impacto */
+    height: 85vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--white);
-    background-image: url('fondo-fitzroy.jpeg'); /* Asegurate que la imagen esté en la carpeta */
+    background-image: url('fondo-fitzroy.jpeg');
     background-size: cover;
     background-position: center;
-    margin-top: -1px; /* Corrige pequeña línea blanca a veces */
 }
 
-/* Capa oscura sobre la imagen para que el texto se lea bien */
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -142,7 +139,6 @@ nav a:hover {
 
 .hero-content h1 {
     font-size: 3.5em;
-    font-weight: 800;
     color: var(--white);
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
@@ -151,10 +147,8 @@ nav a:hover {
 .hero-content p {
     font-size: 1.3em;
     margin-bottom: 35px;
-    opacity: 0.9;
 }
 
-/* Botón de Llamado a la Acción */
 .btn-hero {
     display: inline-block;
     background-color: var(--accent-blue);
@@ -162,36 +156,36 @@ nav a:hover {
     padding: 15px 35px;
     font-weight: 700;
     text-decoration: none;
-    border-radius: 50px; /* Bordes muy redondeados */
+    border-radius: 50px;
     box-shadow: 0 4px 15px rgba(106, 158, 224, 0.4);
     transition: transform 0.3s, background-color 0.3s;
 }
 
 .btn-hero:hover {
     background-color: var(--primary-medium);
-    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+    transform: translateY(-3px);
 }
-.btn-hero i { margin-right: 10px; }
 
-
-/* --- NUEVA SECCIÓN DE CARACTERÍSTICAS (Iconos) --- */
+/* --- SECCIÓN DE CARACTERÍSTICAS (Ajustada para 4 items) --- */
 .features-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 20px;
-    max-width: 1100px;
-    margin: -60px auto 80px auto; /* Superpone la sección al Héroe */
+    max-width: 1200px;
+    margin: -60px auto 80px auto;
     position: relative;
     z-index: 10;
     padding: 0 20px;
+    flex-wrap: wrap; /* Permite que bajen si no hay espacio */
 }
 
 .feature-item {
     background: var(--white);
-    padding: 35px 25px;
+    padding: 30px 20px;
     border-radius: 15px;
     text-align: center;
-    flex: 1;
+    flex: 1 1 250px; /* Tamaño base flexible */
+    max-width: 280px;
     box-shadow: var(--shadow-md);
     transition: transform 0.3s;
 }
@@ -200,31 +194,35 @@ nav a:hover {
     transform: translateY(-5px);
 }
 
+/* Estilo especial para resaltar el Wi-Fi */
+.wifi-highlight {
+    border: 2px solid var(--accent-blue);
+}
+
+.wifi-highlight i {
+    animation: pulse-wifi 2s infinite;
+}
+
+@keyframes pulse-wifi {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
 .icon-box {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: var(--bg-light);
     color: var(--accent-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
     margin: 0 auto 20px auto;
 }
 
-.feature-item h3 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-.feature-item p {
-    color: var(--text-light);
-    font-size: 0.95em;
-}
-
-
-/* --- GALERÍA DE VEHÍCULOS (Tarjetas Modernas) --- */
+/* --- GALERÍA DE VEHÍCULOS --- */
 .gallery-container {
     display: flex;
     justify-content: center;
@@ -234,10 +232,10 @@ nav a:hover {
 
 .gallery-card {
     background: var(--white);
-    border-radius: 16px; /* Bordes más redondeados */
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    flex: 1 1 300px; /* Flexible: base de 300px pero puede crecer */
+    flex: 1 1 300px;
     max-width: 350px;
     transition: box-shadow 0.3s, transform 0.3s;
 }
@@ -256,11 +254,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.gallery-card:hover .img-container img {
-    transform: scale(1.05); /* Efecto zoom suave en la imagen */
 }
 
 .card-content {
@@ -268,23 +261,12 @@ nav a:hover {
     text-align: center;
 }
 
-.card-content h3 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-}
-
-.card-content p {
-    color: var(--text-light);
-    font-size: 0.9em;
-}
-
-
-/* --- TABLA DE PRECIOS (Diseño Limpio) --- */
+/* --- TABLA DE PRECIOS --- */
 .table-container {
     background: var(--white);
     border-radius: 16px;
     box-shadow: var(--shadow-md);
-    overflow: hidden; /* Para que los bordes redondeados apliquen a la tabla */
+    overflow: hidden;
 }
 
 table {
@@ -302,42 +284,20 @@ thead {
     color: var(--white);
 }
 
-th {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
-}
-
 tbody tr {
     border-bottom: 1px solid #eee;
-    transition: background-color 0.2s;
-}
-
-tbody tr:last-child {
-    border-bottom: none;
 }
 
 tbody tr:hover {
     background-color: var(--bg-light);
 }
 
-/* Destacar los precios */
 .price-ars, .price-usd {
     font-weight: 700;
     color: var(--primary-dark);
 }
 
-.aclaracion {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 0.9em;
-    color: var(--text-light);
-    font-style: italic;
-}
-
-
-/* --- FOOTER (Pie de página oscuro y moderno) --- */
+/* --- FOOTER MODERNO --- */
 .footer-section {
     background-color: var(--primary-dark);
     color: var(--white);
@@ -353,17 +313,6 @@ tbody tr:hover {
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
-    text-align: left;
-}
-
-.footer-info h2 {
-    color: var(--white);
-    margin-bottom: 15px;
-}
-
-.footer-info p {
-    opacity: 0.8;
-    max-width: 400px;
 }
 
 .footer-contact-links {
@@ -371,34 +320,22 @@ tbody tr:hover {
     gap: 20px;
 }
 
-/* Botones de contacto grandes en el footer */
 .contact-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 140px;
-    height: 120px;
-    background-color: rgba(255,255,255,0.1); /* Fondo semitransparente */
+    width: 130px;
+    height: 110px;
+    background-color: rgba(255,255,255,0.1);
     color: var(--white);
     text-decoration: none;
     border-radius: 12px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
 .contact-box:hover {
     background-color: var(--accent-blue);
-    transform: translateY(-5px);
-}
-
-.contact-box i {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-}
-
-.contact-box span {
-    font-weight: 600;
-    font-size: 0.9em;
 }
 
 .footer-bottom {
@@ -406,79 +343,36 @@ tbody tr:hover {
     margin-top: 60px;
     padding: 25px 0;
     border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.9em;
     opacity: 0.7;
 }
 
-
-/* =========================================
-   --- ADAPTACIÓN A MÓVILES (Responsive) ---
-   ========================================= */
+/* --- RESPONSIVE (MÓVIL) --- */
 @media (max-width: 768px) {
-    /* Menú móvil */
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    nav ul {
-        gap: 15px;
-    }
-
-    /* Hero móvil */
+    header { flex-direction: column; gap: 15px; }
+    nav ul { gap: 15px; }
     .hero { height: 65vh; }
     .hero-content h1 { font-size: 2.2em; }
-    .btn-hero { padding: 12px 25px; font-size: 0.9em; }
-
-    /* Características móvil (se apilan) */
-    .features-section {
-        flex-direction: column;
-        margin-top: -30px;
-    }
-    .feature-item { margin-bottom: 15px; }
-
-    /* Secciones generales móvil */
-    .content-section { padding: 60px 20px; }
-    .section-title { font-size: 1.8em; }
-
-    /* Tabla móvil (Tipo tarjeta) */
+    
+    .features-section { margin-top: -30px; }
+    
+    /* Tabla estilo tarjeta en móvil */
     thead { display: none; }
     tbody tr {
         display: block;
-        background-color: var(--white);
-        border-radius: 12px;
-        box-shadow: var(--shadow-sm);
         margin-bottom: 20px;
         padding: 15px;
-        border: none;
     }
     td {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
         border-bottom: 1px solid #eee;
-        text-align: right;
     }
-    td:last-child { border-bottom: none; }
     td::before {
         content: attr(data-label);
         font-weight: 600;
         color: var(--primary-medium);
-        text-align: left;
-        margin-right: 20px;
     }
-
-    /* Footer móvil */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-info p { margin: 0 auto; }
-    .footer-contact-links {
-        width: 100%;
-        justify-content: center;
-    }
-    .contact-box {
-        width: 45%; /* Que ocupen casi la mitad cada uno */
-        height: 100px;
-    }
+    
+    .footer-content { flex-direction: column; text-align: center; }
 }
