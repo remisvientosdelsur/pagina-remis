@@ -318,6 +318,8 @@ tbody tr:hover {
 .footer-contact-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Esto permite que los botones bajen si no entran */
+    justify-content: center; /* Esto los centra para que queden prolijos */
 }
 
 .contact-box {
@@ -376,3 +378,4 @@ tbody tr:hover {
     
     .footer-content { flex-direction: column; text-align: center; }
 }
+
