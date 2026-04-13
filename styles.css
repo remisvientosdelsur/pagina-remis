@@ -293,6 +293,15 @@ tbody tr:nth-child(even) {
     background-color: #f0f7ff; 
 }
 
+tbody tr {
+    border-bottom: none; /* Sacamos la línea gris porque ya tenemos los colores */
+}
+
+/* Filas intercaladas: Blanco y Celeste muy suave */
+tbody tr:nth-child(even) {
+    background-color: #f0f7ff; 
+}
+
 tbody tr:nth-child(odd) {
     background-color: var(--white);
 }
