@@ -285,7 +285,7 @@ thead {
 }
 
 tbody tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #cccccc; /* Oscurecimos la línea divisoria */
 }
 
 tbody tr:hover {
@@ -364,11 +364,11 @@ tbody tr:hover {
         margin-bottom: 20px;
         padding: 15px;
     }
-    td {
+   td {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #cccccc; /* Oscurecimos la línea interna en el celular */
     }
     td::before {
         content: attr(data-label);
