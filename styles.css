@@ -285,11 +285,22 @@ thead {
 }
 
 tbody tr {
-    border-bottom: 1px solid #cccccc; /* Oscurecimos la línea divisoria */
+    border-bottom: 1px solid #cccccc; /* Mantenemos tu línea gris oscura */
 }
 
+/* Filas intercaladas: Blanco y Celeste muy suave */
+tbody tr:nth-child(even) {
+    background-color: #f0f7ff; 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+/* Efecto al pasar el mouse más notorio */
 tbody tr:hover {
-    background-color: var(--bg-light);
+    background-color: #e2eefc; 
+    transition: background-color 0.2s;
 }
 
 .price-ars, .price-usd {
